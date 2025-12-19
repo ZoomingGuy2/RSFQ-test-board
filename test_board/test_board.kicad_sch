@@ -5,6 +5,169 @@
 	(uuid "f01d8a8e-7bb6-4363-8f3a-aad691292558")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector:Conn_01x02_Pin"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02_Pin"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x02_Pin_1_1"
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:Conn_01x24_Socket"
 			(pin_names
 				(offset 1.016)
@@ -2784,9 +2947,20 @@
 		)
 		(uuid "c4b81c9c-6725-4a9c-a0bb-aac2de247aa6")
 	)
+	(text "5V current budget:\nPer datasheet FPGA worst case power consumption:\n1.2A @ 1V \n0.6A @ 1.8V\n0.6A @ 3.3V\n4.26 W total\n0.0625 @ 5V from comparators\n4.57 W\n915 mA, USB 3.0 ports max out at 900mA, 2.0 maxes out at 500mA\nIf we have problems we use an external 5V/2A USB supply\nthen communicate to pc over a broken out UART interface"
+		(exclude_from_sim no)
+		(at 15.24 173.355 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dbb5d961-5b4e-4225-8398-9a4c4bf2e8b0")
+	)
 	(text "3.3V current budget:\nComparators: 5.8 mA * 10 = 58 mA\nVoltage reference dividers: 700uA * 10 = 7mA\nVoltage reference quiescent: 25uA * 10 = 250uA\nTotal: 65.25 mA"
 		(exclude_from_sim no)
-		(at 26.67 152.4 0)
+		(at 15.24 153.035 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2794,6 +2968,17 @@
 			(justify left)
 		)
 		(uuid "ee106228-1c94-45de-bb5b-b67422614df5")
+	)
+	(text "Extra pins broken out in case we\nneed an additional comms interface"
+		(exclude_from_sim no)
+		(at 42.545 191.135 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ee5d2b24-ccff-46d7-a8e5-bcabdbec775d")
 	)
 	(junction
 		(at 212.09 52.07)
@@ -4942,6 +5127,50 @@
 			)
 		)
 	)
+	(global_label "pin22"
+		(shape bidirectional)
+		(at 95.25 170.18 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "14712e93-a05c-42f9-89cd-905696948e9b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 85.8317 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "pin23"
+		(shape bidirectional)
+		(at 90.17 192.405 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "18ac0be2-3580-425d-be98-b16a1f51fd6f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 99.5883 192.405 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "out2"
 		(shape input)
 		(at 96.52 52.07 0)
@@ -6033,6 +6262,50 @@
 		(uuid "b6e4b7fa-c934-41ec-a75e-81c062146c8b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 136.1234 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "pin23"
+		(shape bidirectional)
+		(at 95.25 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cf8eb00a-6ca9-4ac0-aedc-dec14b3083bf")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 85.8317 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "pin22"
+		(shape bidirectional)
+		(at 90.17 189.865 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "da9bcfa8-0c70-46c3-b895-ee81edf17106")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 99.5883 189.865 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8378,6 +8651,74 @@
 			(project ""
 				(path "/f01d8a8e-7bb6-4363-8f3a-aad691292558"
 					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 85.09 189.865 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "db5504b4-77d7-4a91-9bde-1d3890ed94de")
+		(property "Reference" "J3"
+			(at 85.725 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02_Pin"
+			(at 85.725 187.325 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 85.09 189.865 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 85.09 189.865 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 85.09 189.865 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "81c5d617-d927-4e7a-872f-f11e70a5f68e")
+		)
+		(pin "2"
+			(uuid "4ee6cf1a-f29e-47ef-a334-15c04e030274")
+		)
+		(instances
+			(project ""
+				(path "/f01d8a8e-7bb6-4363-8f3a-aad691292558"
+					(reference "J3")
 					(unit 1)
 				)
 			)

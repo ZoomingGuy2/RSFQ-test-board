@@ -2,6 +2,7 @@
 
 ## Specs
 - PCB designedi for I/O speeds up to 200 MHz
+- 10 inputs, 20 outputs
 - Compatible with CMOD A7-35T FPGA board
 - 512KB SRAM
 - 4MB Quad-SPI Flash

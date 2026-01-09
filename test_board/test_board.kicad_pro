@@ -123,7 +123,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.16,
+        "min_clearance": 0.12,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
@@ -136,7 +136,7 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
+        "min_track_width": 0.127,
         "min_via_annular_width": 0.05,
         "min_via_diameter": 0.4,
         "solder_mask_to_copper_clearance": 0.005,
@@ -188,7 +188,9 @@
       ],
       "track_widths": [
         0.0,
+        0.0,
         0.19,
+        0.263398,
         0.31,
         0.5,
         1.0
@@ -500,20 +502,20 @@
         "wire_width": 6
       },
       {
-        "clearance": 0.132,
+        "clearance": 0.1524,
         "name": "50_ohm",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.31
+        "track_width": 0.263398
       },
       {
-        "clearance": 0.132,
+        "clearance": 0.1524,
         "name": "50_ohm_out",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.31
+        "track_width": 0.263398
       }
     ],
     "meta": {

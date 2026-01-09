@@ -7863,6 +7863,15 @@
 				(hide yes)
 			)
 		)
+		(property "RotOffset" "180"
+			(at 42.545 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "627dd8da-6e36-45fc-aba6-a29048033208")
 		)

@@ -17582,6 +17582,19 @@
 				)
 			)
 		)
+		(property "RotOffset" "180"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "426dfa10-41d4-4490-8042-12409588644a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/6a3d532d-b4ec-4b64-8473-14e7c5e07f81")
 		(sheetname "/")
 		(sheetfile "test_board.kicad_sch")
